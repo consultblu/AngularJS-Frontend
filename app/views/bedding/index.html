@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="main">
+      <ul id="og-grid" class="og-grid products" >
+        <li sample xscroll-to="anchor{{$index}}" id="anchor{{$index}}" class="not-og-expanded" ng-repeat="item in products track by $index" data-target="{{item.book}}" data-largesrc="{{item.post_img}}" data-title="{{item.title}}" data-description="{{item.summary}}" data-button="Browse Collection" ng-click="showPreview()">
+          <a  id="{{item.title}}" name="{{item.title}}" title="{{item.title}}">
+            <div style="min-height: 180px;">
+              <div class="item_info col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" >
+                <div class="item_container" style="display: table-cell; text-align: center; vertical-align: middle;" >
+                   {{item.title}}<!--<div class="item_title"></div>-->
+                </div>
+              </div>
+              <div class="item_image col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" style="background-image: url('{{item.post_thumb}}'); "><img src="/assets/images/clear.png"></div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+
+$templateCache.put("components/cms/content_blocks/products/products.html","<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"wu-cms-content-block__standard_block\">\n      <div ng-repeat=\"product in contentBlock.products\">\n        <div class=\"col-xs-3\">\n          <img class=\"image\" ng-if=\"product.image\" ng-src=\"{{product.image}}\" />\n        </div>\n        <div class=\"col-xs-9\">\n          <h5 ng-if=\"product.name\" ng-bind=\"product.name\"></h5>\n          <p ng-if=\"product.summary\" ng-bind=\"product.summary\"></p>\n          <a class=\"wu-btn wu-btn--inline wu-btn wu-btn--transparent-black\" ng-href=\"#\">Read More</a>\n          <i class=\"fa fa-leaf\"></i><i class=\"fa fa-cog\"></i>\n  </div>\n        </div>\n      </div>\n    </div>\n</div>\n");

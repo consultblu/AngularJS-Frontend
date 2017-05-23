@@ -1,0 +1,277 @@
+<div class="wu-cms-content-block">
+  <div>
+    <div class="wu-cms-content-block__title_bar__inner" style=";">
+      <div class="container">
+        <div id="" class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="title_bar">
+              <h1 class="page-title ng-binding">We’d love to hear from you</h1>
+              </div>
+          </div>
+        </div>
+      </div>
+      <span class="wu-cms-content-block__title_bar__overlay " style="background-color:rgba(0, 0, 0, 0.3); background-image: url( http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/title_bar-conact-us.jpg ); opacity: 0.4"></span>
+    </div>
+  </div>
+</div>
+<div class="wu-cms-content-block wu-cms-content-block--center">
+  <div class="container">
+    <div class="row">
+      <div class="">
+        <div class="wu-cms-content-block__standard_block">
+          <h1>Contact Us</h1>
+          {exp:freeform:form 
+            form_name="contact_valley_forge" 
+            required="inquiry|first_name|last_name|phone_number"
+            return="/message/251/"
+            require_captcha="yes"
+            parse="inward"}
+          
+          <div class="well form-horizontal">
+          <div class="control-group">
+          <label class="control-label" for="freeform_inquiry">Inquiry/Message <span style="color: #F00">*</span></label>
+          <div class="controls">
+          <textarea name="inquiry" class="input-xlarge" rows="5" id="freeform_inquiry" placeholder="How can we help you today?"></textarea>
+          </div></div>
+          
+          <div class="control-group">
+          <label class="control-label" for="freeform_position_title">Position/Title </label>
+          <div class="controls">
+          <input type="text" class="input-xlarge" name="position_title" value="" id="freeform_position_title" maxlength="150" placeholder="Your position"/>
+          </div>
+          </div>
+          <div class="control-group">                    
+          <label class="control-label" for="freeform_first_name">Name <span style="color: #F00">*</span></label>
+          <div class="controls">
+          <input type="text" class="input-small" name="first_name" value="{if '{visitor:global:member_firstname}'}{visitor:global:member_firstname}{/if}" id="freeform_first_name" maxlength="150" placeholder="First..." /> 
+          <input type="text" class="input-medium" name="last_name" value="{if '{visitor:global:member_lastname}'}{visitor:global:member_lastname}{/if}" id="freeform_last_name" maxlength="150" placeholder="Last..."  />
+          </div>
+          </div>
+          <div class="control-group"> 
+          <label class="control-label" for="freeform_phone_number">Phone Number <span style="color: #F00">*</span></label>
+          <div class="controls">
+          <input type="text" class="input-xlarge" name="phone_number" value="{if '{visitor:global:member_phone}'}{visitor:global:member_phone}{/if}" id="freeform_phone_number" maxlength="150" placeholder="Phone Number..." />
+          </div>
+          </div>
+          <div class="control-group"> 
+          <label class="control-label" for="freeform_email">Email <span style="color: #F00">*</span></label>
+          <div class="controls">
+          <input type="text" class="input-xlarge" name="email" value="{logged_in_username}" id="freeform_email" maxlength="150" placeholder="you@yourcompany.com.."/>
+          </div>
+          </div>
+          <div class="control-group">
+          <label class="control-label" for="freeform_customer_number">Customer Number</label>
+          <div class="controls">
+          <input type="text" class="input-xlarge" name="customer_number" value="{if '{visitor:global:member_customer_number}'}{visitor:global:member_customer_number}{/if}" id="freeform_customer_number" maxlength="150" placeholder="Customer Number (if you have one).." />
+          </div>
+          </div>
+          <div class="control-group">
+          <label class="control-label" for="freeform_company">Company</label>
+          <div class="controls">
+          <input type="text" class="input-xlarge" name="company" value="{if '{visitor:global:member_company}'}{visitor:global:member_company}{/if}" id="freeform_company" maxlength="150" placeholder="Company Name.." />
+          </div>
+          </div>
+          <div class="control-group">
+          <label class="control-label" for="freeform_project_name">Project Name</label>
+          <div class="controls">
+          <input type="text" class="input-xlarge" name="project_name" value="" id="freeform_project_name" maxlength="150" placeholder="Project Name.." />
+          </div></div>
+          <div class="control-group">
+          <label class="control-label" for="freeform_address_1">Address</label>
+          <div class="controls">
+          <div class="stacked">
+          <input type="text" class="input-xlarge" name="address_1" value="" id="freeform_address_1" maxlength="150" placeholder="Address 1.." />
+          <input type="text" class="input-xlarge" name="address_2" value="" id="freeform_address_2" maxlength="150" placeholder="Address 2.." />
+          <input type="text" class="input-xlarge" name="city" value="" id="freeform_city" maxlength="150" placeholder="City.." />
+          <select name="state" class="span2"  id="freeform_state">
+          <option value="">State</option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="GU">Guam</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="PR">Puerto Rico</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="VI">Virgin Islands</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+          </select>
+          <input type="text" class="input-small" name="zip" value="" id="freeform_zip" maxlength="150" placeholder="Zip Code.." />
+          </div>							
+          </div>
+          </div>
+          <div class="control-group">
+          <label class="control-label">General Info</label>
+          <div class="controls">
+                  <p>
+                  <label for="freeform_general_info_2">Are you a purchasing agent?</label>														
+          <label class="radio" for="freeform_general_info_2_1"><input type="radio"  name="general_info_2" id="freeform_general_info_2_1" value="Yes" />Yes</label>
+          <label class="radio" for="freeform_general_info_2_2"><input type="radio" name="general_info_2" id="freeform_general_info_2_2" value="No" />No</label>
+                  </p>
+                  
+                  <p>
+                  <label for="freeform_general_info_3">Are you employed at a Hotel company? </label>
+                  <label class="radio" for="freeform_general_info_3_1"><input type="radio" name="general_info_3" id="freeform_general_info_3_1" value="Yes" />Yes</label>                          
+          <label class="radio" for="freeform_general_info_3_2"><input type="radio" name="general_info_3" id="freeform_general_info_3_2" value="No" />No</label>
+          </p>
+          
+          <p>
+          <label for="freeform_general_info_1">Are you primarily a hospitality designer OR residential designer? </label>
+          <label class="radio" for="freeform_general_info_1_1"><input type="radio" name="general_info_1" id="freeform_general_info_1_1" value="Hospitality" />Hospitality</label>
+          <label class="radio" for="freeform_general_info_1_2"><input type="radio" name="general_info_1" id="freeform_general_info_1_2" value="Residential" />Residential</label>
+          
+          </p>
+          </div>							
+          </div>
+          <div class="control-group">
+          <label class="control-label">CAPTCHA: <span style="color: #F00">*</span></label>
+          <div class="controls">
+          {if freeform:captcha}
+          
+          <p>{freeform:captcha}<br />
+          <input type="text" name="captcha" style="width:140px;" /></p>
+          {/if}			</div>
+          
+          </div>
+          
+          
+          <div class="control-group">
+          <div class="controls">
+          <input class="btn btn-inverse btn-large" type="submit" name="submit" value="Submit Inquiry"  /></div>						
+          </div>
+          
+          </div>
+          {/exp:freeform:form}  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wu-cms-content-block ng-isolate-scope wu-cms-content-block--center">
+  <div class="container">
+    <div class="row">
+      <div class="">
+        <div class="wu-cms-content-block__standard_block">
+          <div class="col-xs-12">
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-pin_drop.png" alt="" />
+                <h5>USA</h5>
+                <p>Valley Forge Fabrics, Inc. <br/> 1650 West McNab Road <br/> Fort Lauderdale, FL 33069</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-pin_drop.png" alt="" />
+                <h5>Shanghai</h5>
+                <p>Valley Forge Fabrics Ltd. <br/> Room 902, Building No.11 <br/> No. 238 South Pu Chi Road <br/> Minhang District, Shanghai, <br/> 201112, China</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-pin_drop.png" alt="" />
+                <h5>Dubai</h5>
+                <p>Valley Forge Fabrics <br/> P.O. Box 124917 <br/> Duabi, UAE</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-phone.png" alt="" />
+                <p>954 971 1776</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-phone.png" alt="" />
+                <p>+8621 (0) 5485 3191</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-phone.png" alt="" />
+                <p>+8621 (0) 5485 3191</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12">
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-fax.png" alt="" />
+                <p>954 968 1775</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-fax.png" alt="" />
+                <p>+8621 (0) 5485 3191</p>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="col-xs-12 text-center">
+                <img src="http://c67bfc7c934596c5d2de-384a0fe271c727cec0e8a9b32788243a.r54.cf1.rackcdn.com/contact_us-fax.png" alt="" />
+                <p>+8621 (0) 5485 3191</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wu-cms-content-block ng-isolate-scope wu-cms-content-block">
+        <map center="26.213863, -80.163125" zoom="13" style="height: 400px; display: block;">
+          <info-window id="1" position="26.213863, -80.163125" visible="true">
+            <div ng-non-bindable="">
+              <h5>Valley Forge Fabrics</h5>
+              2981 Gateway Dr, <br>
+              Pompano Beach, FL 33069 <br>
+            </div>
+          </info-window>
+        </map>
+</div>

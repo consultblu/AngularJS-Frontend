@@ -1,0 +1,91 @@
+<!--<section ng-controller="DesignLibraryCtrl as library" >-->
+<div class="row">
+<section >
+
+<div class="twelve columns">
+<h3 class="pull-left">Filter By</h3>
+Search by color: <!-- <input type="text" ng-model="search.color"> -->
+<input type="text" ng-model="search" class="form-control" />
+</div>
+<div class="twelve columns">
+<ul class="inline-list nav nav-pills">
+  <li>
+    <select ng-model="filter.use">
+      <option selected="selected"  value="">Use</option>
+      <option ng-repeat="use in filters.uses" value="{{use}}" ng-show="use !=  null || use.length > 2">{{use}}</option>
+    </select>
+  </li>
+  <li>
+    <select ng-model="filter.type">
+      <option selected="selected"  value="">Type</option>
+      <option ng-repeat="type in filters.types" value="{{type}}" ng-show="type !=  null">{{type}}</option>
+    </select>
+  </li>
+  <li>
+    <select ng-model="filter.style">
+      <option selected="selected"  value="">Style</option>
+      <option ng-repeat="style in filters.styles" value="{{style}}" ng-show="style !=  null">{{style}}</option>
+    </select>
+  </li>
+    <li>
+    <select ng-model="filter.color">
+      <option selected="selected"  value="">Color</option>
+      <option ng-repeat="color in filters.colors" value="{{color}}" ng-show="color !=  null">{{color}}</option>
+    </select>
+  </li>
+    <li>
+    <select ng-model="filter.content">
+      <option selected="selected"  value="">Material</option>
+      <option ng-repeat="content in filters.contents" value="{{content}}" ng-show="content !=  null">{{content}}</option>
+    </select>
+  </li>
+    <li>
+    <select ng-model="filter.inventory">
+      <option selected="selected"  value="">Inventory</option>
+      <option ng-repeat="inventory in filters.inventory" value="{{inventory}}">{{inventory}}</option>
+    </select>
+  </li>
+</ul>
+</div>
+<div class="twelve columns">
+  <div class="library">
+    <h3 class="pull-left">Sort By</h3>
+    <ul class="inline-list">
+      <li><div><a ng-click="setOrder('-')">Unsorted</a></div></li>
+      <li><div><a ng-click="setOrder('name')">Name</a></div></li>
+      <li><div><a ng-click="setOrder('color')">Color</a></div></li>
+      <li><div><a ng-click="setOrder('use')">Use</a></div></li>
+    </ul>
+  </div>
+</div><div class="twelve columns library">
+    <!-- <div masonry>
+        <div class="masonry-brick" ng-repeat="sample in samples | orderBy:predicate:reverse " style="width:220px;height:147px;">
+          <img src="http://www.valleyforge.com/images/made/uploads/skus/{{sample.name}}_220_147_70.jpg" alt="{{sample.name}}" >
+        </div>
+    </div> -->
+    <ul class="large-block-grid-5 dl-grid" ng-style="{height: ((samples.length * 3) + 'rem')}" style="height: auto !important;">
+      <li class="close " ng-repeat="sample in samples | filter:{use : filter.use, type: filter.type, style: filter.style, color : filter.color, content : filter.content} | orderBy:predicate:reverse" ng-style="{transition : 'all .5s ease', top: ((sample.row * 9.7) + 'rem'), left: ((sample.column * 14.7) + 'rem'), padding : '0px'}" >
+        <a sample id="{{sample.name}}" data-url="/#{{sample.name}}" data-largesrc="uploads/skus/{{sample.name}}.jpg" data-title="{{sample.name}}" data-description="{{sample.style}}" ng-click="previewItem='{{$index}}'"  >
+          <img ng-src="http://www.valleyforge.com/images/made/uploads/skus/{{sample.name}}_220_147.jpg" style="height:147px; width:222px;"/>
+          <span ng-style="{padding : '0 0.625rem 1.25rem'}">{{sample.name}}</span>
+          <!--<br /> <span>Age: {{sample.age}}</span>
+          <br /> <span>Company: {{sample.company}}</span>-->
+          
+        </a>
+        <div id="Modal-{{sample.name}}" class="reveal-modal" data-reveal>
+          <h2>Awesome. I have it.</h2>
+          <p class="lead">Your couch.  It is mine.</p>
+          <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+      </li>
+      <li class="btn">
+        <button class="btn" ng-click="getSamples(search,'true')" style="width:100%;">Load more</button>
+      </li>
+    </ul>
+
+</div>
+
+
+</section>
+</div>

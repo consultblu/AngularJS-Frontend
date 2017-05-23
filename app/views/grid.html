@@ -1,0 +1,20 @@
+<div class="container">
+  <section>
+    <div class="main">
+      <ul id="og-grid" class="og-grid collections" >
+        <li sample xscroll-to="anchor{{$index}}" id="anchor{{$index}}" class="not-og-expanded" ng-repeat="item in collections track by $index" data-target="{{item.book}}" data-largesrc="{{item.post_img}}" data-title="{{item.title}}" data-description="{{item.summary}}" data-button="Browse Collection" ng-click="showPreview()">
+          <a  id="{{item.title}}" name="{{item.title}}" title="{{item.title}}">
+            <div style="min-height: 180px;">
+              <div class="item_info col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" >
+                <div class="item_container" style="display: table-cell; text-align: center; vertical-align: middle;" >
+                   {{item.title}}<!--<div class="item_title"></div>-->
+                </div>
+              </div>
+              <div class="item_image col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" style="background-image: url('{{item.post_thumb}}'); "><img src="/assets/images/clear.png"></div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>

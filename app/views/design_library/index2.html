@@ -1,0 +1,84 @@
+<div class="container -row">
+<div class="row">
+<div class="col-xs-10">
+<div class="col-xs-12 pull-left">
+  <div class="col-xs-2"><span class="fa fa-search  pull-left"></span><h4 class="pull-left">Search</h4></div>
+  <div class="col-xs-8"><input type="text" ng-model="search" class="form-control" /></div>
+</div>
+<div class="col-xs-12 pull-left">
+  <div class="col-xs-2"><span class="fa fa-tags pull-left"></span><h4 class="pull-left">Filter</h4></div>
+  <ul class="col-xs-10">
+      <li class="col-xs-2">
+        <select class="form-control" ng-options="use as use for use in filters.uses " ng-model="filter.use" ng-change="updateTags(filter.use)">
+          <option value="">Select Option</option>
+        </select>
+      </li>
+      <li class="col-xs-2">
+        <select class="form-control" ng-options="type as type for type in filters.types" ng-model="filter.type" ng-change="updateTags(filter.type)">
+          <option value="">Select Option</option>
+        </select>
+      </li>
+      <li class="col-xs-2">
+        <select class="form-control" ng-options="style as style for style in filters.styles" ng-model="filter.style" ng-change="updateTags(filter.style)">
+          <option value="">Select Option</option>
+        </select>
+      </li>
+        <li class="col-xs-2">
+        <select class="form-control" ng-options="color as color for color in filters.colors" ng-model="filter.color" ng-change="updateTags(filter.color)">
+          <option value="">Select Option</option>
+        </select>
+      </li>
+        <li class="col-xs-2">
+        <select class="form-control" ng-options="content as content for content in filters.contents" ng-model="filter.content" ng-change="updateTags(filter.content)">
+          <option value="">Select Option</option>
+        </select>
+      </li>
+      <li class="col-xs-2">
+        <select class="col-xs-12 form-control"  ng-options="inv as inv for inv in filters.inventory" ng-model="filter.inventory" ng-change="updateTags()">
+          <option value="">Select Option</option>
+        </select>
+      </li>
+    </ul>
+</div>
+<div class="col-xs-12 pull-left">
+  <div class="col-xs-2">
+    <span class="fa fa-archive pull-left"></span><h4 class="pull-left">Inventory</h4>
+  </div>
+  <div class="col-xs-4">
+  
+		
+    
+  </div>
+  <div class="col-xs-1 pull-right">
+  <span class="dropdown" dropdown on-toggle="toggled(open)">
+    <a href class="dropdown-toggle" dropdown-toggle><h4>Sort By <span class="caret"></span></h4></a>
+    <ul class="dropdown-menu">
+      <li><div><a ng-click="setOrder('-')">Unsorted</a></div></li>
+      <li><div><a ng-click="setOrder('name')">Name</a></div></li>
+      <li><div><a ng-click="setOrder('color')">Color</a></div></li>
+      <li><div><a ng-click="setOrder('use')">Use</a></div></li>
+    </ul></span>
+  </div>
+</div>
+</div>
+<div class=" col-xs-2 pull-right" style="border:1px solid #000">
+  <tags-input class="filtertags" 
+                ng-model="tags"
+                replace-spaces-with-dashes="false">
+  </tags-input>
+</div>
+</div>
+<div class="main">
+  <ul id="og-grid" class="og-grid dl-grid" >
+    <li sample xscroll-to="anchor{{$index}} " class="not-og-expanded" id="anchor{{$index}}" ng-repeat="item in samples | filter:{use : filter.use, type: filter.type, style: filter.style, color : filter.color, content : filter.content} | orderBy:predicate:reverse" data-url="/#{{item.name}}" data-largesrc="uploads/skus/{{item.name}}.jpg" data-button="Request Sample"   ng-click="showPreview()" >
+      <a id="{{ item.name }}">
+        <img ng-src="http://www.valleyforge.com/images/made/uploads/skus/{{item.name}}_220_147_70.jpg" alt="{{ item.name }}"/>
+        <span ng-style="{padding : '0 0.625rem 1.25rem'}">{{item.name}}</span>
+      </a>
+    </li>
+    <li class="btn">
+      <button class="btn" ng-click="getSamples(search,'true')" style="width:100%;">Load more</button>
+    </li>
+  </ul>
+</div>
+</div>

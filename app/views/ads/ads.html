@@ -1,0 +1,16 @@
+<div class="container">
+  <section>
+    <div class="main">
+      <ul id="og-grid" class="og-grid collections" >
+        <li sample xscroll-to="anchor{{$index}} " class="not-og-expanded" id="anchor{{$index}}" ng-repeat="item in Ads track by $index" data-url="/#{{item.name}}" data-largesrc="uploads/skus/{{item.name}}.jpg" data-button="Request Sample"   ng-click="showPreview()" >
+          <a id="{{ item.name }}">
+            <img ng-src="{{item.post_thumb}}" alt="{{ item.name }}"/>
+            <span ng-style="{padding : '0 0.625rem 1.25rem'}">{{item.name}}</span>
+          </a>
+        </li>
+      <li class="btn">
+        <button class="btn" ng-click="getSamples(search,'true')" style="width:100%;">Load more</button>
+      </li>
+    </ul>
+  </section>
+</div>
