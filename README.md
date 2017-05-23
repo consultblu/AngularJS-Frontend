@@ -12,9 +12,9 @@ block type.
 
 ```
 {
-  "content_block_type": &lt;content_block_type_here&gt;,
-  "alignment": &lt;alignment_here&gt;,
-  "color": &lt;color_here&gt;
+  "content_block_type": <content_block_type_here>,
+  "alignment": <alignment_here>,
+  "color": <color_here>
 }
 ```
 
@@ -39,9 +39,9 @@ Some content block objects allow a `button` property.
 
 ```
 {
-  "label": &lt;button_label_here&gt;,
-  "url": &lt;button_url_here&gt;,
-  "style": &lt;button_style_here&gt;
+  "label": <button_label_here>,
+  "url": <button_url_here>,
+  "style": <button_style_here>
 }
 ```
 
@@ -81,8 +81,8 @@ the same rules as the `url` property of the button, mentioned above.
 
 ```
 {
-  "url": &lt;link_url_here&gt;,
-  "label": &lt;link_label_here&gt;
+  "url": <link_url_here>,
+  "label": <link_label_here>
 }
 ```
 
@@ -107,13 +107,13 @@ another page in this AngularJS site, if a `url` is provided.
 {
   "content_block_type": "banner",
   "banner": {
-    "url": &lt;banner_url_here&gt;,
+    "url": <banner_url_here>,
     "images": {
-      "xs": &lt;url_to_320_image_here&gt;,
-      "sm": &lt;url_to_480_image_here&gt;,
-      "md": &lt;url_to_768_image_here&gt;,
-      "lg": &lt;url_to_992_image_here&gt;,
-      "xl": &lt;url_to_1400_image_here&gt;
+      "xs": <url_to_320_image_here>,
+      "sm": <url_to_480_image_here>,
+      "md": <url_to_768_image_here>,
+      "lg": <url_to_992_image_here>,
+      "xl": <url_to_1400_image_here>
     }
   }
 }
@@ -141,33 +141,33 @@ This content block type will be used to display responsive carousel/sliders.
   "content_block_type": "banner_carousel",
   "banner_carousel": [
     {
-      "url": &lt;banner_url_here&gt;,
+      "url": <banner_url_here>,
       "images": {
-        "xs": &lt;url_to_320_image_here&gt;,
-        "sm": &lt;url_to_480_image_here&gt;,
-        "md": &lt;url_to_768_image_here&gt;,
-        "lg": &lt;url_to_992_image_here&gt;,
-        "xl": &lt;url_to_1400_image_here&gt;
+        "xs": <url_to_320_image_here>,
+        "sm": <url_to_480_image_here>,
+        "md": <url_to_768_image_here>,
+        "lg": <url_to_992_image_here>,
+        "xl": <url_to_1400_image_here>
       }
     },
     {
-      "url": &lt;banner_url_here&gt;,
+      "url": <banner_url_here>,
       "images": {
-        "xs": &lt;url_to_320_image_here&gt;,
-        "sm": &lt;url_to_480_image_here&gt;,
-        "md": &lt;url_to_768_image_here&gt;,
-        "lg": &lt;url_to_992_image_here&gt;,
-        "xl": &lt;url_to_1400_image_here&gt;
+        "xs": <url_to_320_image_here>,
+        "sm": <url_to_480_image_here>,
+        "md": <url_to_768_image_here>,
+        "lg": <url_to_992_image_here>,
+        "xl": <url_to_1400_image_here>
       }
     },
     {
-      "url": &lt;banner_url_here&gt;,
+      "url": <banner_url_here>,
       "images": {
-        "xs": &lt;url_to_320_image_here&gt;,
-        "sm": &lt;url_to_480_image_here&gt;,
-        "md": &lt;url_to_768_image_here&gt;,
-        "lg": &lt;url_to_992_image_here&gt;,
-        "xl": &lt;url_to_1400_image_here&gt;
+        "xs": <url_to_320_image_here>,
+        "sm": <url_to_480_image_here>,
+        "md": <url_to_768_image_here>,
+        "lg": <url_to_992_image_here>,
+        "xl": <url_to_1400_image_here>
       }
     }
   ]
@@ -197,13 +197,13 @@ may want to use a button, and in other cases you may want to use a link.
 ```
 {
   "content_block_type": "standard_block",
-  "color": &lt;content_block_color_here&gt;,
-  "alignment": &lt;content_block_alignment_here&gt;,
+  "color": <content_block_color_here>,
+  "alignment": <content_block_alignment_here>,
   "standard_block": {
-    "headline": &lt;headline_here&gt;,
-    "body": &lt;block_body_here&gt;,
-    "button": &lt;button_element_here&gt;,
-    "link": &lt;link_element_here&gt;
+    "headline": <headline_here>,
+    "body": <block_body_here>,
+    "button": <button_element_here>,
+    "link": <link_element_here>
   }
 }
 ```
@@ -263,10 +263,10 @@ displayed in the same order as mentioned in the `standard_block` element.
   "color": "gray",
   "two_column": [
     {
-      "headline": &lt;headline_here&gt;,
-      "body": &lt;body_here&gt;,
-      "button": &lt;button_here&gt;,
-      "link": &lt;link_here&gt;
+      "headline": <headline_here>,
+      "body": <body_here>,
+      "button": <button_here>,
+      "link": <link_here>
     }
   ]
 }
@@ -322,10 +322,10 @@ large font. It can be used to replicate the "1, 2, 3" numbers on the "Sell" page
   "content_block_type": "three_column",
   "three_column": [
     {
-      "headline": &lt;headline_here&gt;,
-      "body": &lt;body_here&gt;,
-      "button": &lt;button_here&gt;,
-      "link": &lt;link_here&gt;
+      "headline": <headline_here>,
+      "body": <body_here>,
+      "button": <button_here>,
+      "link": <link_here>
     }
   ]
 }
@@ -394,8 +394,8 @@ MacBooks.
   "content_block_type": "call_to_action",
   "call_to_action": [
     {
-      "url": &lt;page_to_link_this_cta_to&gt;,
-      "image_url": &lt;url_to_cta_image_here&gt;
+      "url": <page_to_link_this_cta_to>,
+      "image_url": <url_to_cta_image_here>
     }
   ]
 }
