@@ -1,2 +1,4 @@
 .git
 .vagrant
+node_modules
+_notes
